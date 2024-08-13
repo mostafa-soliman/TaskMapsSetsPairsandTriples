@@ -197,7 +197,6 @@ println("***********************************************************************
 //    * 3. Pair and Triple
 //    * 1. Working with Pairs:
 //    * 1.4. Use a loop to iterate through the list of pairs and print each pair.
-    println("***************************************************************************")
 
     for (n in listOfPairs.iterator()){
         println(n)
@@ -208,16 +207,33 @@ println("***********************************************************************
 //   * 2. Working with Triples:
 //  * 2.1. Declare a Triple of a string, an integer, and a double with the values ("apple", 5, 1.1).
 
+    val tripleStrIntDouble :Triple<String,Int,Double> = Triple("apple", 5, 1.1)
 
 //   * 2. Working with Triples:
 //  * 2.2. Access the first, second, and third elements of the triple and print them.
 
+    println("the firstelements of the triple:-  ${tripleStrIntDouble.first}")
+    println("the second elements of the triple:-  ${tripleStrIntDouble.second}")
+    println("the third elements of the triple:-  ${tripleStrIntDouble.third}")
 
 //   * 2. Working with Triples:
 //  * 2.3. Create a list of triples with the values [("one", 1, 1.1), ("two", 2, 2.2), ("three", 3, 3.3)].
 
+  val listOfTriples = listOf(Triple("one", 1, 1.1), Triple("two", 2, 2.2), Triple("three", 3, 3.3))
+
+
 //   * 2. Working with Triples:
 //  * 2.4. Use a loop to iterate through the list of triples and print each triple.
+    println("***************************************************************************")
+
+    listOfTriples.forEach { it -> println(it)}
+
+    println("***************************************************************************")
+
+    for (n in listOfTriples.iterator()){
+        println(n)
+    }
+
 }
 
 
