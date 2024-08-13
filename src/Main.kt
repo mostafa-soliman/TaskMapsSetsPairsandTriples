@@ -54,10 +54,12 @@ fun main() {
   * 1.2. Create a MutableList to store duplicated elements.
   * 1.3. Use a loop to iterate through the list and add any element that appears more than once to the MutableList of duplicates.
   * 1.4. Print the MutableList of duplicated elements.
+  *
   * 2. Remove Duplications Using Set:
   * 2.1. Convert the original list to a Set to remove all duplications.
   * 2.2. Convert the Set back to a list.
   * 2.3. Print the list after removing duplications.
+  *
   * 3. Check for Duplications with Additional Elements:
   * 3.1. Add additional elements [2, 7, 8, 3] to the original list.
   * 3.2. Convert the updated list to a Set to remove any new duplications.
@@ -234,10 +236,71 @@ println("***********************************************************************
         println(n)
     }
 
+//  * 4. Removing Duplications Using Set
+//  * 1. Handling Duplications:
+//  * 1.1. Declare a List of integers with the values [1, 2, 3, 2, 4, 5, 3, 6, 1].
+
+    val listInt :List<Int> = listOf(1, 2, 3, 2, 4, 5, 3, 6, 1)
+
+    //  * 4. Removing Duplications Using Set
+//  * 1. Handling Duplications:
+//  * 1.2. Create a MutableList to store duplicated elements.
+
+//    val treeSet: TreeSet<Int> = sortedSetOf(1, 2, 3, 2, 4, 5, 3, 6, 1)
+//    treeSet.forEach { println(it) }
+//    Error : Kotlin: Unresolved reference: SortedSet
+
+
+
+
+    //  * 4. Removing Duplications Using Set
+//  * 1. Handling Duplications:
+//  * 1.3. Use a loop to iterate through the list and add any element that appears more than once to the MutableList of duplicates.
+
+
+
+    //  * 4. Removing Duplications Using Set
+//  * 1. Handling Duplications:
+//  * 1.4. Print the MutableList of duplicated elements.
+    println("***************************************************************************")
+
+
+    listInt.forEach { println(it) }
+//  * 2. Remove Duplications Using Set:
+//  * 2.1. Convert the original list to a Set to remove all duplications.
+    val setListInt : MutableSet<Int> = listInt.toMutableSet()
+
+//  * 2. Remove Duplications Using Set:
+//  * 2.2. Convert the Set back to a list.
+val toListFromSet =setListInt.toMutableList()
+//  * 2. Remove Duplications Using Set:
+//  * 2.3. Print the list after removing duplications.
+
+    println("***************************************************************************")
+
+    toListFromSet.forEach { println(it) }
+
+//  * 3. Check for Duplications with Additional Elements:
+//  * 3.1. Add additional elements [2, 7, 8, 3] to the original list.
+//    toListFromSet.add(2)
+//    toListFromSet.add(7)
+//    toListFromSet.add(8)
+//    toListFromSet.add(3)
+    toListFromSet += listOf(2, 7, 8, 3)
+
+    println("***************************************************************************")
+
+    toListFromSet.forEach { println(it) }
+
+//  * 3. Check for Duplications with Additional Elements:
+//  * 3.2. Convert the updated list to a Set to remove any new duplications.
+    val setListIntUpdated : MutableSet<Int> = toListFromSet.toMutableSet()
+
+//  * 3. Check for Duplications with Additional Elements:
+//  * 3.3. Print the list after removing the new duplications
+    println("***************************************************************************")
+
+    setListIntUpdated.forEach { println(it) }
 }
 
 
-
-//fun createImmutableMapStrToInt():Map<String,Int>{
-//
-//}
